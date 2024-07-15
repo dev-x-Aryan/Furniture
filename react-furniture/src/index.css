@@ -12,3 +12,24 @@ body {
   font-size: 0.75rem;
   font-style: normal;
 }
+
+/* index.css */
+
+.imageSlider {
+  height: 400px;
+  background-image: url(./assets/slider1.webp);
+  background-size: 100% 100%;
+  animation: changeImage 10s linear infinite;
+}
+
+@keyframes changeImage {
+  0% {
+    background-image: url(./assets/slider1.webp);
+  }
+  25% {
+    background-image: url(./assets/slider2.webp);
+  }
+  50% {
+    background-image: url(./assets/slider3.webp);
+  }
+}
