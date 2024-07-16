@@ -30,7 +30,7 @@ const ImageSlider = ({ imageUrls }) => {
         <img
           src={imageUrls[imageIndex]}
           alt="#"
-          className="h-full w-full transition-opacity duration-1000 ease-in-out"
+          className="h-full w-full transition-opacity  "
         />
         <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
           <button onClick={showPrevImage}>

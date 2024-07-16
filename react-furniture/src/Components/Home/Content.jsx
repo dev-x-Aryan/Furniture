@@ -39,11 +39,73 @@ const Content = () => {
           <div className="p-5">
             <h1 className="text-[2rem]">Catalog</h1>
           </div>
+          <div className="flex justify-between flex-wrap">
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\catalogImg.webp"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\catalogImg.webp"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\catalogImg.webp"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\catalogImg.webp"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\catalogImg.webp"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="new-arrivals">
+          <div className="p-5">
+            <h1 className="text-[2rem]">New Arrivals</h1>
+          </div>
           <div className="flex justify-between">
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
-                  src="src\assets\catalogImg.webp"
+                  src="src\assets\newArrivals.avif"
                   alt="#"
                   className="h-[100px] w-[100px]"
                 />
@@ -54,7 +116,7 @@ const Content = () => {
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
-                  src="src\assets\catalogImg.webp"
+                  src="src\assets\newArrivals.avif"
                   alt="#"
                   className="h-[100px] w-[100px]"
                 />
@@ -65,7 +127,7 @@ const Content = () => {
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
-                  src="src\assets\catalogImg.webp"
+                  src="src\assets\newArrivals.avif"
                   alt="#"
                   className="h-[100px] w-[100px]"
                 />
@@ -76,7 +138,7 @@ const Content = () => {
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
-                  src="src\assets\catalogImg.webp"
+                  src="src\assets\newArrivals.avif"
                   alt="#"
                   className="h-[100px] w-[100px]"
                 />
@@ -87,7 +149,7 @@ const Content = () => {
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
-                  src="src\assets\catalogImg.webp"
+                  src="src\assets\newArrivals.avif"
                   alt="#"
                   className="h-[100px] w-[100px]"
                 />
@@ -105,8 +167,91 @@ const Content = () => {
             <img src="src\assets\brands.png" />
           </div>
         </div>
+
+        <div className="new-arrivals mt-10 mb-10">
+          <div className="p-5">
+            <h1 className="text-[2rem]">Luxary Collections</h1>
+          </div>
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="login mt-20 opacity-90">
+          <h1 className="text-[2rem] pt-2">SignUp and Save</h1>
+          <p>
+            Subscribe to get special offers, free giveaways, and
+            once-in-a-lifetime deals.
+          </p>
+          <div className="">
+            <input type="email" className="login-input" />
+            <button className="bg-emerald-500 p-3 rounded-xl"> Email</button>
+          </div>
+        </div>
+
+        <div className="clearence mt-20">
+          <div className="p-5">
+            <h1 className="text-[2rem]">Clearence</h1>
+          </div>
+          <div>
+            <img src="src\assets\clearence.png" alt="#" />
+          </div>
+        </div>
       </div>
-      <div className="imageSlider h-[500px] w-[60%] m-auto"></div>
+      <div className="imageSlider w-[80%] m-auto"></div>
     </div>
   );
   return content;
