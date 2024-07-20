@@ -5,9 +5,7 @@ import Content from "./Content.jsx";
 const Home = () => {
   const content = (
     <div>
-      <div>
-        <Content />
-      </div>
+      <Content />
     </div>
   );
   return content;

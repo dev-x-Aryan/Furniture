@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Wrapper from "./Components/Wrapper";
 import Navbar from "./Components/Home/Navbar";
 import Footer from "./Components/Home/Footer";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" Component={Wrapper} />
-        <Route path="/collection" Component={Footer} />
+        <Route path="/collections/:name" Component={ProductDetails} />
       </Routes>
       <div className="bottom-0 w-full h-[10rem]">
         <Footer />

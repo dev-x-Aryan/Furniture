@@ -1,7 +1,13 @@
 import React from "react";
 import ImageSlider from "../Content/ImageSlider.jsx";
+import toast from "react-hot-toast";
+import ProductSlider from "../ProductSlider.jsx";
 
 const Content = () => {
+  const handleLogin = () => {
+    toast.success("Login successfully.");
+  };
+
   const slider1 =
     "https://www.istanbulfurniture.com/cdn/shop/files/Massimo-Shawl-Turkish-Luxury-Furniture-Set-5_b856b289-db9c-465b-8787-b9a7e8bddffb_900x.jpg?v=1719919826";
 
@@ -16,13 +22,13 @@ const Content = () => {
   const imageUrls = [slider1, slider2, slider3, slider4];
   const content = (
     <div className="flex flex-col">
-      <div className="flex justify-between mb-4 ">
-        <div className="h-[500px] w-[60%]">
+      <div className="slider-container flex flex-row justify-between mb-4 md:flex-col ">
+        <div className="h-[500px] md:h-[250px] w-[60%] md:w-full">
           <ImageSlider imageUrls={imageUrls} />
         </div>
-        <div className="w-[40%] max-h-[500px] p-10 flex flex-col justify-evenly items-center">
+        <div className="w-[40%] md:w-full max-h-[500px] md:max-h-auto p-10 flex flex-col justify-evenly items-center ">
           <div>
-            <h1 className="text-[4rem] text-wrap text-center">
+            <h1 className="text-[4rem] md:text-[2rem] text-wrap text-center">
               Prizma MyL Collection
             </h1>
           </div>
@@ -34,10 +40,10 @@ const Content = () => {
           <button className="bg-black text-white p-2">Shop Now</button>
         </div>
       </div>
-      <div className="w-[70%] m-auto mb-[5rem]">
+      <div className="w-[70%] m-auto mb-[5rem] md:hidden">
         <div className="catalog">
           <div className="p-5">
-            <h1 className="text-[2rem]">Catalog</h1>
+            <h1 className="text-[2rem] md:text-[1rem]">Catalog</h1>
           </div>
           <div className="flex justify-between flex-wrap">
             <div className="flex flex-col">
@@ -99,9 +105,11 @@ const Content = () => {
 
         <div className="new-arrivals">
           <div className="p-5">
-            <h1 className="text-[2rem]">New Arrivals</h1>
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              New Arrivals
+            </h1>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap">
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
@@ -161,7 +169,9 @@ const Content = () => {
 
         <div className="brands">
           <div className="p-5">
-            <h1 className="text-[2rem]">Our Brands</h1>
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              Our Brands
+            </h1>
           </div>
           <div>
             <img src="src\assets\brands.png" />
@@ -170,9 +180,11 @@ const Content = () => {
 
         <div className="new-arrivals mt-10 mb-10">
           <div className="p-5">
-            <h1 className="text-[2rem]">Luxary Collections</h1>
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              Luxary Collections
+            </h1>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap">
             <div className="flex flex-col">
               <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
                 <img
@@ -241,17 +253,203 @@ const Content = () => {
             <button className="bg-emerald-500 p-3 rounded-xl"> Email</button>
           </div>
         </div>
+      </div>
 
-        <div className="clearence mt-20">
+      <div className="w-[70%] m-auto mb-[5rem] hidden md:block">
+        <div className="catalog">
           <div className="p-5">
-            <h1 className="text-[2rem]">Clearence</h1>
+            <h1 className="text-[2rem] md:text-[1rem]">Catalog</h1>
+          </div>
+          <div className="flex justify-between ">
+            <div className="relative  w-[100%] max-w-4xl h-80">
+              <ProductSlider imageUrls={imageUrls} />
+            </div>
+          </div>
+        </div>
+
+        <div className="new-arrivals md:hidden">
+          <div className="p-5">
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              New Arrivals
+            </h1>
+          </div>
+          <div className="flex justify-between flex-wrap">
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="new-arrivals hidden md:block">
+          <div className="p-5">
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              New Arrivals
+            </h1>
+          </div>
+          <div className="flex justify-between ">
+            <ImageSlider imageUrls={imageUrls} />
+          </div>
+        </div>
+        <div className="brands">
+          <div className="p-5">
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              Our Brands
+            </h1>
           </div>
           <div>
-            <img src="src\assets\clearence.png" alt="#" />
+            <img src="src\assets\brands.png" />
+          </div>
+        </div>
+
+        <div className="luxary-collections mt-10 mb-10 md:hidden ">
+          <div className="p-5">
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              Luxary Collections
+            </h1>
+          </div>
+          <div className="flex justify-between flex-wrap">
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="h-[200px] w-[150px] bg-neutral-200 flex items-center justify-center hover:shadow-xl ">
+                <img
+                  src="src\assets\newArrivals.avif"
+                  alt="#"
+                  className="h-[100px] w-[100px]"
+                />
+              </div>
+              <p className="text-center font-bold pt-2">Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="luxary-collections mt-10 mb-10 hidden md:block ">
+          <div className="p-5">
+            <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+              Luxary Collections
+            </h1>
+          </div>
+          <div className="flex justify-between flex-wrap">
+            <ImageSlider imageUrls={imageUrls} />
+          </div>
+        </div>
+        <div className="login mt-20 opacity-90">
+          <h1 className="text-[2rem] pt-2">SignUp and Save</h1>
+          <p>
+            Subscribe to get special offers, free giveaways, and
+            once-in-a-lifetime deals.
+          </p>
+          <div className="">
+            <input type="email" className="login-input" />
+            <button className="bg-emerald-500 p-3 rounded-xl"> Email</button>
           </div>
         </div>
       </div>
-      <div className="imageSlider w-[80%] m-auto"></div>
+
+      <div className="imageSlider w-[80%] m-auto md:h-[250px] md:w-full"></div>
+      <div className="clearence mt-20">
+        <div className="p-5">
+          <h1 className="text-[2rem] md:text-[1rem] md:mt-2 md:mb-2">
+            Clearence
+          </h1>
+        </div>
+        <div>
+          <img src="src\assets\clearence.png" alt="#" />
+        </div>
+      </div>
     </div>
   );
   return content;
