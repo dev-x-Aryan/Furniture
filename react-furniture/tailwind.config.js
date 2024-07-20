@@ -2,6 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+<<<<<<< HEAD
     extend: {},
     screens: {
       sm: { max: "639px" },
@@ -9,6 +10,13 @@ export default {
       lg: { max: "1023px" },
       xl: { max: "1279px" },
       "2xl": { max: "1535px" },
+=======
+    extend: {
+      translate: {
+        '1.25': '0.3125rem',  // Custom translate value for 5px
+        '-1.25': '-0.3125rem', // Custom negative translate value for -5px
+      }
+>>>>>>> origin/test-aryan
     },
   },
   plugins: [],

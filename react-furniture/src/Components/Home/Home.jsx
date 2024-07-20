@@ -5,7 +5,15 @@ import Content from "./Content.jsx";
 const Home = () => {
   const content = (
     <div>
+<<<<<<< HEAD
       <Content />
+=======
+      
+      <div>
+        <Content />
+      </div>
+      
+>>>>>>> origin/test-aryan
     </div>
   );
   return content;
