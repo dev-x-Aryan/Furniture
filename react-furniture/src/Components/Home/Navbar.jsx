@@ -136,7 +136,11 @@ const Navbar = () => {
       <div className="text-white flex justify-between w-[80%] m-auto">
         <div className="w-[60%] flex justify-between p-2 items-center gap-3">
           <div>
-            <img src="src/assets/img.avif" alt="#" className="pl-3 pb-3" />
+            <img
+              src="https://www.istanbulfurniture.com/cdn/shop/files/31_280x.png?v=1652868697"
+              alt="#"
+              className="pl-3 pb-3"
+            />
           </div>
           <div className="w-[60%] flex items-center gap-2 bg-white rounded-sm ml-3 p-2">
             <input

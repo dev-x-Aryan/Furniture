@@ -2,16 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Wrapper from "./Components/Wrapper";
-<<<<<<< HEAD
+import Category from "./Components/Category/Category";
 import Navbar from "./Components/Home/Navbar";
 import Footer from "./Components/Home/Footer";
-import ProductDetails from "./Components/ProductDetails/ProductDetails";
-=======
-import Category from "./Components/Category/Category"
-import Navbar from "./Components/Home/Navbar";
-import Footer from "./Components/Home/Footer";
->>>>>>> origin/test-aryan
-
+import ProductDetails from "./Components/ProductDetails/ProductDetails.jsx";
 const App = () => {
   return (
     <>
@@ -19,24 +13,14 @@ const App = () => {
         <Navbar />
       </div>
       <Routes>
-<<<<<<< HEAD
-        <Route path="/" Component={Wrapper} />
-        <Route path="/collections/:name" Component={ProductDetails} />
+        <Route exact path="/" Component={Wrapper} />
+        <Route exact path="/collections/:name" element={<Category />} />
+        <Route exact path="/product" element={<ProductDetails />} />
       </Routes>
       <div className="bottom-0 w-full h-[10rem]">
         <Footer />
       </div>
     </>
-=======
-      <Route exact path="/" Component={Wrapper} />
-      <Route exact path="/collections" element={<Category />} />
-    </Routes>
-      {/* <div className="bottom-0 w-full h-[10rem]">
-        <Footer />
-      </div> */}
-    </>
-    
->>>>>>> origin/test-aryan
   );
 };
 
