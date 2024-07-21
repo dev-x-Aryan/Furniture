@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(245, 245, 245, 0.088);
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* index.css */
+
+.imageSlider {
+  height: 700px;
+  background-image: url(./assets/slider1.webp);
+  background-size: 100% 100%;
+  animation: changeImage 10s linear infinite;
+}
+
+@keyframes changeImage {
+  0% {
+    background-image: url(./assets/slider1.webp);
+  }
+  25% {
+    background-image: url(./assets/slider2.webp);
+  }
+  50% {
+    background-image: url(./assets/slider3.webp);
+  }
+}
+
+.login {
+  background-image: url(https://www.istanbulfurniture.com/cdn/shop/t/19/assets/swirl.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(127, 255, 212, 0.359);
+
+  padding: 1rem;
+  text-align: center;
+}
+
+.login-input {
+  padding: 0.75rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.73);
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+.product-container {
+  background-color: whitesmoke;
+}
