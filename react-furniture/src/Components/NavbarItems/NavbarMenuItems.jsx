@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavbarDropdown from "./NavbarDropDown.jsx";
 
 const menuItems = [
@@ -99,17 +99,38 @@ const menuItems = [
   },
 ];
 
-const NavbarMenuItems = () => {
+const NavbarMenuItems = ({ open }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative">
-      <ul className="list-none flex justify-around items-center text-white border-t-[0.05px] border-neutral-700 p-1">
-        {menuItems.map((menuItem, index) => (
-          <NavbarDropdown
-            key={index}
-            title={menuItem.title}
-            dropdownItems={menuItem.dropdownItems}
-          />
-        ))}
+    <div className="relative w-full flex">
+      <ul className="list-none flex md:flex-col justify-around items-center text-white border-t-[0.05px] border-neutral-700 p-1 w-[100vw]">
+        {menuItems.map((menuItem, index) =>
+          isMobile ? (
+            open && (
+              <NavbarDropdown
+                key={index}
+                title={menuItem.title}
+                dropdownItems={menuItem.dropdownItems}
+              />
+            )
+          ) : (
+            <NavbarDropdown
+              key={index}
+              title={menuItem.title}
+              dropdownItems={menuItem.dropdownItems}
+            />
+          )
+        )}
       </ul>
     </div>
   );

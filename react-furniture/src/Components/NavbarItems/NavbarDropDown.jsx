@@ -13,7 +13,7 @@ const NavbarDropdown = ({ title, dropdownItems }) => {
 
   return (
     <li
-      className="cursor-pointer w-full text-center p-2 hover:bg-neutral-700 hover:rounded-xl relative"
+      className="cursor-pointer w-full text-center  p-2 hover:bg-neutral-700 hover:rounded-xl relative"
       onMouseEnter={toggleDropdown}
       onMouseLeave={closeDropdown}
     >
@@ -33,7 +33,7 @@ const NavbarDropdown = ({ title, dropdownItems }) => {
                 {section.items.map((item, idx) => (
                   <a
                     key={idx}
-                    href="#"
+                    href={`/collections/${item}`}
                     className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:rounded-xl"
                   >
                     {item}
