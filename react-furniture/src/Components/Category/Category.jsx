@@ -1,10 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import ProductCard from "./ProductCard";
 
 const Category = () => {
   const { name } = useParams();
+  const navigate = useNavigate();
 
+  const handleProduct = () => {
+    navigate("/product");
+  };
   return (
     <>
       <div className="catalog-container border border-b-[1px] mb-5 pb-3 ">

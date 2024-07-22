@@ -3,14 +3,22 @@ import { BiCart, BiSearch, BiUser } from "react-icons/bi";
 import NavbarMenuItems from "../NavbarItems/NavbarMenuItems";
 import Dialog from "./Dialog.jsx";
 import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
   const [showDialog, setShowDialog] = useState(false);
   const [dialogDetails, setDialogDetails] = useState("");
   const [itemCount, setItemCount] = useState(1);
   const itemPrice = 5399.0;
   const [totalCost, setTotalCost] = useState(itemPrice);
-
+  const navigate = useNavigate();
+  const handleLogo = () => {
+    navigate("/");
+  };
   const handleCheckout = () => {
     toast.success("Added to cart.");
   };
@@ -55,7 +63,7 @@ const Navbar = () => {
               <label className="mb-2 block">Email:</label>
               <input
                 type="text"
-                className="bg-transparent outline-none border border-black p-2 mb-2 text-black w-full"
+                className="bg-transparent outline-none border border-black p-2 mb-2 text-black w-full cursor-pointer"
                 placeholder="akash@gmail.com"
                 required
               />
@@ -133,16 +141,17 @@ const Navbar = () => {
 
   return (
     <div className="bg-black min-h-[5rem] w-full">
-      <div className="text-white flex justify-between w-[80%] m-auto">
-        <div className="w-[60%] flex justify-between p-2 items-center gap-3">
-          <div>
+      <div className="text-white flex justify-between w-[80%] md:w-[100%] m-auto">
+        <div className="w-[60%] flex justify-between p-2 items-center gap-3 md:flex-col ">
+          <div className=" flex justify-end md:w-full md:justify-start ">
             <img
               src="https://www.istanbulfurniture.com/cdn/shop/files/31_280x.png?v=1652868697"
               alt="#"
               className="pl-3 pb-3"
+              onClick={handleLogo}
             />
           </div>
-          <div className="w-[60%] flex items-center gap-2 bg-white rounded-sm ml-3 p-2">
+          <div className="w-[60%]  flex items-center gap-2 bg-white rounded-sm ml-3 p-2 md:w-full ">
             <input
               type="text"
               className="bg-transparent outline-none border-none text-black w-full"
@@ -151,20 +160,26 @@ const Navbar = () => {
             <BiSearch className="cursor-pointer hover:bg-slate-900 rounded-2xl hover:text-neutral-400 h-auto w-auto p-2 text-black border border-black hover:border-slate-900" />
           </div>
         </div>
-        <div className="flex gap-3 items-center w-[40%] justify-end">
+        <div className="flex gap-3 items-center w-[40%] md:w-[30%] justify-end md:flex-col md:items-center md:justify-center ">
           <div
-            className="inline-flex gap-2 items-center border p-2 rounded-sm mr-2 cursor-pointer hover:bg-slate-700 hover:text-wrap"
+            className="inline-flex gap-2 items-center border p-2 rounded-sm mr-2 cursor-pointer hover:bg-slate-700 hover:text-wrap "
             onClick={() => openDialog("Accounts")}
           >
             <BiUser />
             ACCOUNTS
           </div>
           <div
-            className="inline-flex gap-2 items-center border p-2 rounded-sm mr-2 cursor-pointer hover:bg-slate-700"
+            className="inline-flex gap-2 items-center border p-2 rounded-sm mr-2 cursor-pointer hover:bg-slate-700 md:w-[6.15rem]"
             onClick={() => openDialog("Cart")}
           >
             <BiCart />
             CART
+          </div>
+
+          <div className="hidden md:block" onClick={toggleOpen}>
+            <div className="mt-1-0 p-0 w-7 h-0 border"></div>
+            <div className="mt-1 p-0 w-7 h-0 border"></div>
+            <div className="mt-1 p-0 w-7 h-0 border"></div>
           </div>
           <Dialog show={showDialog} onClose={closeDialog} title={dialogDetails}>
             {dialogContent}
@@ -172,7 +187,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <NavbarMenuItems />
+        <NavbarMenuItems open={open} />
       </div>
     </div>
   );
