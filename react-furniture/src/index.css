@@ -58,3 +58,34 @@ body {
 .product-container {
   background-color: whitesmoke;
 }
+
+/* WebKit browsers */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the draggable part of the scrollbar */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovering over the scrollbar */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #888 #f0f0f0; /* Scrollbar color and background color */
+}
+
+/* Edge and Chrome for non-WebKit based browsers */
+.scrollable {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0; /* Scrollbar color and background color */
+}

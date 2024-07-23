@@ -140,7 +140,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-black min-h-[5rem] w-full">
+    <div className="bg-black min-h-[5rem] w-full ">
       <div className="text-white flex justify-between w-[80%] md:w-[100%] m-auto">
         <div className="w-[60%] flex justify-between p-2 items-center gap-3 md:flex-col ">
           <div className=" flex justify-end md:w-full md:justify-start ">
