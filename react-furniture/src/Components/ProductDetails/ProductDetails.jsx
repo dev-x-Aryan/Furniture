@@ -20,6 +20,10 @@ const ProductDetails = () => {
   const handleLinks = () => {
     navigate("/collections/Living Room");
   };
+
+  const handleCart = () => {
+    toast.success("Added to cart.");
+  };
   const slider1 =
     "https://www.istanbulfurniture.com/cdn/shop/files/Massimo-Shawl-Turkish-Luxury-Furniture-Set-5_b856b289-db9c-465b-8787-b9a7e8bddffb_900x.jpg?v=1719919826";
 
@@ -93,7 +97,7 @@ const ProductDetails = () => {
               <div className="w-full mt-5 text-center ">
                 <button
                   className="border w-full border-black p-2 rounded-sm hover:bg-black hover:text-white text-black"
-                  onClick={toast.success("Successfully Added to Cart.")}
+                  onClick={handleCart}
                 >
                   Add to cart
                 </button>
@@ -287,7 +291,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="login mt-20 opacity-90">
+      <div className="login mt-20 opacity-90" onClick={handleHome}>
         <h1 className="text-[2rem] pt-2">Back to Shopping</h1>
         <div>
           <button className="bg-black text-white p-3 rounded-sm hover:border border-none cursor-pointer">

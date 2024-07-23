@@ -147,7 +147,7 @@ const Navbar = () => {
             <img
               src="https://www.istanbulfurniture.com/cdn/shop/files/31_280x.png?v=1652868697"
               alt="#"
-              className="pl-3 pb-3"
+              className="pl-3 pb-3 cursor-pointer"
               onClick={handleLogo}
             />
           </div>
