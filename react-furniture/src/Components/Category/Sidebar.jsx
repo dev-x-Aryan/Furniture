@@ -42,7 +42,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className=" max-h-screen p-4  border-r border-gray-300 ">
+    <div className=" overflow-scroll p-4  border-r border-gray-300 relative border z-10">
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"

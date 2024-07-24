@@ -14,7 +14,7 @@ const Slider = ({ imageUrls }) => {
   };
 
   return (
-    <div className="slider-container-box border ">
+    <div className="slider-container-box  ">
       <div className="main-image ">
         <img
           src={imageUrls[currentIndex]}

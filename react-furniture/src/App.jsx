@@ -9,7 +9,7 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails.jsx";
 const App = () => {
   return (
     <>
-      <div className="sticky top-0 z-10">
+      <div className="sticky top-0 z-20">
         <Navbar />
       </div>
       <Routes>

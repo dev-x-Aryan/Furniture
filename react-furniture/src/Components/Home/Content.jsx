@@ -400,7 +400,7 @@ const Content = () => {
             <input type="email" className="login-input" />
             <button
               className="bg-emerald-500 p-3 rounded-xl"
-              onClick={toast.success("logged in successfully.")}
+              // onClick={toast.success("logged in successfully.")}
             >
               {" "}
               Email
