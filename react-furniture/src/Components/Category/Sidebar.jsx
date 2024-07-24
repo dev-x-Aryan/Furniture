@@ -42,8 +42,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className=" overflow-scroll p-4  border-r border-gray-300 relative border z-10">
-      <div className="mb-4">
+    <div className="max-h-[35%] p-4 border-r border-gray-300 overflow-y-scroll">
+      <div className="mb-4 ">
         <div
           className="flex justify-between items-center cursor-pointer"
           onClick={togglePrice}
